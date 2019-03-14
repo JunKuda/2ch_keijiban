@@ -28,20 +28,22 @@
         {% endfor %}
     </div>
 
-    <div class="wiring_form">
-        <div class="writing_form_top_contents">
-            <input type="submit" name="writing_button" value="書き込む">
-            <span>名前:</span>
-            <input type="text" id="name" name="name" size="19"></textarea>
-            <span>E-mail:</span>
-            <input type="text" id="e-mail" name="e-mail" size="19"></textarea>
-        </div>
+    <form method="post" action="/">
+        <div class="writing_form">
+            <div class="writing_form_top_contents">
+                <input type="submit" name="writing_button" value="書き込む">
+                <span>名前:</span>
+                <input type="text" id="name" name="name" size="19"></textarea>
+                <span>E-mail:</span>
+                <input type="text" id="e-mail" name="e-mail" size="19"></textarea>
+            </div>
 
-        <div>
-            <textarea id="msg" name="msg" cols="70" rows="5"></textarea>
-        </div>
+            <div>
+                <textarea id="msg" name="msg" cols="70" rows="5"></textarea>
+            </div>
 
-    </div>
+        </div>
+    </form>
 
 </body>
 </html>

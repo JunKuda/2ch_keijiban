@@ -19,18 +19,18 @@ class Article(db.Model):
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
+    print(request.method)
     if request.method == 'POST':
         date = datetime.now()
         name = request.form['name']
         msg = request.form['msg']
-        admin = Article(pub_date=date, name=name, msg=msg)
-        db.session.add(admin)
+        post = Article(pub_date=date, name=name, msg=msg)
+        db.session.add(post)
         db.session.commit()
         contents = Article.query.all()
-        return render_template('index.html', lines = contents)
+        return render_template('index.html', contents = contents)
 
     contents = Article.query.all()
-    print(contents)
     return render_template('index.html', contents=contents)
     
 

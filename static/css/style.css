@@ -5,3 +5,7 @@ body {
 .top_menu{
     border-bottom: 1px solid darkgrey;
 }
+
+.writing_form{
+    border-top: 1px solid darkgrey;
+}
