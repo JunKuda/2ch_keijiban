@@ -15,6 +15,17 @@
     </div>
 
     <div class="post_contents">
+        {% for content in contents %}
+        <div>
+            <span>{{content.id}}: </span>
+            <span style="color:green" ><b>{{content.name}}</b>: </span>
+            <span>{{content.pub_date}}</span>
+        </div>
+
+        <div>
+            <dd>{{content.msg}}</dd>
+        </div>
+        {% endfor %}
     </div>
 
     <div class="wiring_form">
